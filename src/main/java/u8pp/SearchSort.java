@@ -154,9 +154,9 @@ public class SearchSort {
                 for(int i = leg - mid; i > 0; i--){
                     back.add(arr.get(leg - i));
                 }
-                mergeSort(front);
-                mergeSort(back);
-                merge(front,back, arr);
+                ArrayList<Student> a = new ArrayList<Student>(mergeSort(front));
+                ArrayList<Student> b = new ArrayList<Student>(mergeSort(back));
+                merge(a,b, arr);
             }
         }
         return arr;
